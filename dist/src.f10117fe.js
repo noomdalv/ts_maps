@@ -85168,7 +85168,6 @@ var User_1 = require("./User");
 
 var Company_1 = require("./Company");
 
-console.log("hi there");
 var user = new User_1.User();
 var company = new Company_1.Company();
 console.log(user);
@@ -85201,7 +85200,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60359" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61881" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

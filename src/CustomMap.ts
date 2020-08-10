@@ -1,8 +1,10 @@
-interface Item {
+export interface Item {
 	location: {
 		lat: number;
 		lng: number;
 	};
+	color: string;
+	markerContent(): string;
 }
 
 export class CustomMap {
@@ -10,7 +12,7 @@ export class CustomMap {
 
 	constructor(divId: string) {
 		this.googleMap = new google.maps.Map(document.getElementById(divId), {
-			zoom: 2,
+			zoom: 1,
 			center: {
 				lat: 0,
 				lng: 0,
@@ -18,9 +20,9 @@ export class CustomMap {
 		});
 	}
 
-	addMarker(item: Item, color: string): void {
+	addMarker(item: Item): void {
 		let url = "https://maps.google.com/mapfiles/ms/icons/";
-		url += color + "-dot.png";
+		url += item.color + "-dot.png";
 
 		const marker = new google.maps.Marker({
 			map: this.googleMap,
@@ -35,7 +37,7 @@ export class CustomMap {
 
 		marker.addListener("click", () => {
 			const infoWindow = new google.maps.InfoWindow({
-				content: "Hi there",
+				content: item.markerContent(),
 			});
 
 			infoWindow.open(this.googleMap, marker);

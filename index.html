@@ -1,6 +1,32 @@
 <html>
+	<link rel="stylesheet" href="./index.css" />
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+		integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+		crossorigin="anonymous"
+	/>
 	<body>
-		<div id="map" style="height: 100%;"></div>
+		<div class="container">
+			<div class="three column">
+				<div id="map" class="column"></div>
+			</div>
+
+			<div class="card column">
+				<div class="content">
+					<div class="header">
+						Elliot Fu
+					</div>
+					<div class="meta">
+						Friends of Veronika
+					</div>
+					<div class="description">
+						Elliot requested permission to view your contact details
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSsGP_OOyuwq9gtJgT5Eex8BnA41b-HY8"></script>
 		<script src="./src/index.ts"></script>
 	</body>

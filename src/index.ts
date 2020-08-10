@@ -9,5 +9,5 @@ console.log(user);
 console.log(company);
 
 const customMap = new CustomMap("map");
-customMap.addMarker(user, "blue");
-customMap.addMarker(company, "red");
+customMap.addMarker(user);
+customMap.addMarker(company);

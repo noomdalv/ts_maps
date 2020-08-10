@@ -85119,7 +85119,12 @@ function () {
       lat: parseFloat(faker_1.default.address.latitude()),
       lng: parseFloat(faker_1.default.address.longitude())
     };
+    this.color = "blue";
   }
+
+  User.prototype.markerContent = function () {
+    return "User Name: " + this.name;
+  };
 
   return User;
 }();
@@ -85151,7 +85156,12 @@ function () {
       lat: parseFloat(faker_1.default.address.latitude()),
       lng: parseFloat(faker_1.default.address.longitude())
     };
+    this.color = "red";
   }
+
+  Company.prototype.markerContent = function () {
+    return "\n\t\t<div>\n\t\t\t<h1>Company Name: " + this.companyName + "</h1>\n\t\t\t<h3>Catch Phrase: " + this.catchPhrase + "</h3>\n\t\t</div>\n\t\t";
+  };
 
   return Company;
 }();
@@ -85170,7 +85180,7 @@ var CustomMap =
 function () {
   function CustomMap(divId) {
     this.googleMap = new google.maps.Map(document.getElementById(divId), {
-      zoom: 2,
+      zoom: 1,
       center: {
         lat: 0,
         lng: 0
@@ -85178,11 +85188,11 @@ function () {
     });
   }
 
-  CustomMap.prototype.addMarker = function (item, color) {
+  CustomMap.prototype.addMarker = function (item) {
     var _this = this;
 
     var url = "https://maps.google.com/mapfiles/ms/icons/";
-    url += color + "-dot.png";
+    url += item.color + "-dot.png";
     var marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
@@ -85195,7 +85205,7 @@ function () {
     });
     marker.addListener("click", function () {
       var infoWindow = new google.maps.InfoWindow({
-        content: "Hi there"
+        content: item.markerContent()
       });
       infoWindow.open(_this.googleMap, marker);
     });
@@ -85223,8 +85233,8 @@ var company = new Company_1.Company();
 console.log(user);
 console.log(company);
 var customMap = new CustomMap_1.CustomMap("map");
-customMap.addMarker(user, "blue");
-customMap.addMarker(company, "red");
+customMap.addMarker(user);
+customMap.addMarker(company);
 },{"./User":"src/User.ts","./Company":"src/Company.ts","./CustomMap":"src/CustomMap.ts"}],"C:/Users/striu/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -85253,7 +85263,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54888" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58080" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

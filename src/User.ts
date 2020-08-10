@@ -6,6 +6,7 @@ export class User {
 		lat: number;
 		lng: number;
 	};
+	color: string;
 
 	constructor() {
 		this.name = faker.name.firstName();
@@ -13,5 +14,10 @@ export class User {
 			lat: parseFloat(faker.address.latitude()),
 			lng: parseFloat(faker.address.longitude()),
 		};
+		this.color = "blue";
+	}
+
+	markerContent(): string {
+		return `User Name: ${this.name}`;
 	}
 }

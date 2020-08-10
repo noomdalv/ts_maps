@@ -1,4 +1,5 @@
-import faker from "faker";
+import faker from "faker/locale/en_US";
+faker.locale = "en_US";
 
 export class User {
 	name: string;
@@ -7,14 +8,15 @@ export class User {
 		lng: number;
 	};
 	color: string;
+	status: string;
 
-	constructor() {
+	constructor(status: string) {
 		this.name = faker.name.firstName();
 		this.location = {
 			lat: parseFloat(faker.address.latitude()),
 			lng: parseFloat(faker.address.longitude()),
 		};
-		this.color = "blue";
+		this.color = status === "online" ? "green" : "red";
 	}
 
 	markerContent(): string {

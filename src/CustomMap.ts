@@ -33,6 +33,7 @@ export class CustomMap {
 			icon: {
 				url: url,
 			},
+			animation: 2,
 		});
 
 		marker.addListener("click", () => {

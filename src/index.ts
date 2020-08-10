@@ -2,12 +2,16 @@ import { User } from "./User";
 import { Company } from "./Company";
 import { CustomMap } from "./CustomMap";
 
-const user = new User();
+const userA = new User("online");
+const userB = new User("online");
+const userC = new User("offline");
 const company = new Company();
 
-console.log(user);
+console.log(userA, userB);
 console.log(company);
 
 const customMap = new CustomMap("map");
-customMap.addMarker(user);
+customMap.addMarker(userA);
+customMap.addMarker(userB);
+customMap.addMarker(userC);
 customMap.addMarker(company);

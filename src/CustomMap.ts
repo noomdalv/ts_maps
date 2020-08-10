@@ -1,5 +1,9 @@
-import { User } from "./User";
-import { Company } from "./Company";
+interface Item {
+	location: {
+		lat: number;
+		lng: number;
+	};
+}
 
 export class CustomMap {
 	private googleMap: google.maps.Map;
@@ -14,15 +18,27 @@ export class CustomMap {
 		});
 	}
 
-	addUserMarker(user: User): void {
-		new google.maps.Marker({
+	addMarker(item: Item, color: string): void {
+		let url = "https://maps.google.com/mapfiles/ms/icons/";
+		url += color + "-dot.png";
+
+		const marker = new google.maps.Marker({
 			map: this.googleMap,
 			position: {
-				lat: user.location.lat,
-				lng: user.location.lng,
+				lat: item.location.lat,
+				lng: item.location.lng,
+			},
+			icon: {
+				url: url,
 			},
 		});
-	}
 
-	addCompanyMarker(company: Company): void {}
+		marker.addListener("click", () => {
+			const infoWindow = new google.maps.InfoWindow({
+				content: "Hi there",
+			});
+
+			infoWindow.open(this.googleMap, marker);
+		});
+	}
 }

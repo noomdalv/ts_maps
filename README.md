@@ -1,7 +1,8 @@
-## TypeScript Google Maps Api 101
+## TypeScript Google Maps API 101
 
-This project it's a TypeScript 101 fundamentals(Types, Annotations, Interfaces) implementation of a Google Maps API.
-The App consists in 2 basic class models(User and Company) which pull random generated data from faker js API, creating map markers to display in the map with their respective info window popup.
+TypeScript 101 fundamentals(Types, Annotations, Interfaces) implementation of a Google Maps API.
+The App consists in 2 basic class models(User and Company) which pull random generated data from faker js API, 
+creating map markers to display in the map with their respective info window popup.
 
 ## Built With
 
@@ -13,7 +14,7 @@ The App consists in 2 basic class models(User and Company) which pull random gen
 
 ## Screenshot
 
-<img src="./src/ts_maps.jpg">
+<img src="./src/ts_maps.jpg" height="150%" width="150%">
 
 ## Setup instructions
 

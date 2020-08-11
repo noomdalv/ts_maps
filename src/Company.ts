@@ -2,7 +2,8 @@ import faker from "faker";
 
 export class Company {
 	companyName: string;
-	catchPhrase: string;
+	bs: string;
+	ip: string;
 	location: {
 		lat: number;
 		lng: number;
@@ -11,7 +12,8 @@ export class Company {
 
 	constructor() {
 		this.companyName = faker.company.companyName();
-		this.catchPhrase = faker.company.catchPhrase();
+		this.bs = faker.company.bs();
+		this.ip = faker.internet.ip();
 		this.location = {
 			lat: parseFloat(faker.address.latitude()),
 			lng: parseFloat(faker.address.longitude()),
@@ -21,10 +23,18 @@ export class Company {
 
 	markerContent(): string {
 		return `
-		<div>
-			<h1>Company Name: ${this.companyName}</h1>
-			<h3>Catch Phrase: ${this.catchPhrase}</h3>
-		</div>
+			<div class="ui card company">
+				<div class="content">
+					<div class="header">
+						<h3>${this.companyName}</h3>
+					</div>
+				</div>
+				<div class="content">
+					<h5>${this.bs}</h5>				
+					<b>Server:</b>
+					<p>${this.ip}</p>
+				</div>
+			</div>
 		`;
 	}
 }

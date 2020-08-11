@@ -16,7 +16,7 @@ export class Company {
 		this.ip = faker.internet.ip();
 		this.location = {
 			lat: parseFloat(faker.address.latitude()),
-			lng: parseFloat(faker.address.longitude()),
+			lng: parseFloat(faker.address.latitude()),
 		};
 		this.color = "yellow";
 	}
@@ -26,14 +26,14 @@ export class Company {
 			<div class="ui card company">				
 				<div class="info">					
 					<div class="left floated header">
-						<h3>${this.companyName}</h3>						
+						<h4>${this.companyName}</h4>						
 					</div>
 					<div class="right floated company-icon">
 						<i class="building icon"></i>	
 					</div>									
 				</div>				
 				<div class="companyip">
-					<h5>${this.bs}</h5>				
+					<h6>${this.bs}</h6>				
 					<b>Server:</b>
 					<p>${this.ip}</p>
 				</div>

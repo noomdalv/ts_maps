@@ -85168,13 +85168,13 @@ function () {
     this.ip = faker_1.default.internet.ip();
     this.location = {
       lat: parseFloat(faker_1.default.address.latitude()),
-      lng: parseFloat(faker_1.default.address.longitude())
+      lng: parseFloat(faker_1.default.address.latitude())
     };
     this.color = "yellow";
   }
 
   Company.prototype.markerContent = function () {
-    return "\n\t\t\t<div class=\"ui card company\">\t\t\t\t\n\t\t\t\t<div class=\"info\">\t\t\t\t\t\n\t\t\t\t\t<div class=\"left floated header\">\n\t\t\t\t\t\t<h3>" + this.companyName + "</h3>\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"right floated company-icon\">\n\t\t\t\t\t\t<i class=\"building icon\"></i>\t\n\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\n\t\t\t\t</div>\t\t\t\t\n\t\t\t\t<div class=\"companyip\">\n\t\t\t\t\t<h5>" + this.bs + "</h5>\t\t\t\t\n\t\t\t\t\t<b>Server:</b>\n\t\t\t\t\t<p>" + this.ip + "</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t";
+    return "\n\t\t\t<div class=\"ui card company\">\t\t\t\t\n\t\t\t\t<div class=\"info\">\t\t\t\t\t\n\t\t\t\t\t<div class=\"left floated header\">\n\t\t\t\t\t\t<h4>" + this.companyName + "</h4>\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"right floated company-icon\">\n\t\t\t\t\t\t<i class=\"building icon\"></i>\t\n\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\n\t\t\t\t</div>\t\t\t\t\n\t\t\t\t<div class=\"companyip\">\n\t\t\t\t\t<h6>" + this.bs + "</h6>\t\t\t\t\n\t\t\t\t\t<b>Server:</b>\n\t\t\t\t\t<p>" + this.ip + "</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t";
   };
 
   return Company;
@@ -85245,14 +85245,12 @@ var CustomMap_1 = require("./CustomMap");
 
 var userA = new User_1.User("online");
 var userB = new User_1.User("online");
-var userC = new User_1.User("offline");
 var company = new Company_1.Company();
 console.log(userA, userB);
 console.log(company);
 var customMap = new CustomMap_1.CustomMap("map");
 customMap.addMarker(userA);
 customMap.addMarker(userB);
-customMap.addMarker(userC);
 customMap.addMarker(company);
 },{"./User":"src/User.ts","./Company":"src/Company.ts","./CustomMap":"src/CustomMap.ts"}],"C:/Users/striu/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

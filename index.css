@@ -5,7 +5,6 @@
 
 .user {
 	width: 200px;
-	padding: 5px;
 	text-transform: capitalize;
 }
 
@@ -22,7 +21,6 @@
 
 .user .description {
 	display: flex;
-	padding-left: 5px;
 	align-items: bottom;
 }
 
@@ -50,11 +48,7 @@
 
 .userip p {
 	font-size: 10px;
-}
-
-.company {
-	width: 250px;
-	text-transform: capitalize;
+	font-weight: bold;
 }
 
 .status-icon {
@@ -62,4 +56,28 @@
 	height: 18px;
 	width: 18px;
 	border-radius: 50%;
+}
+
+.company {
+	width: 250px;
+	text-transform: capitalize;
+}
+
+.company .info {
+	border-bottom: rgb(231, 183, 78) 2px solid;
+}
+
+.company .icon {
+	margin-left: 10px;
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+
+.companyip {
+	margin-top: 10px;
+}
+
+.companyip p {
+	font-size: 12px;
+	font-weight: bold;
 }

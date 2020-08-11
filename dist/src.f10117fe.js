@@ -21099,7 +21099,7 @@ function () {
 
   User.prototype.markerContent = function () {
     var bg = this.color === "green" ? "#26b756" : "red";
-    return "\n\t\t<div class=\"card user\">\n\t\t\t<div class=\"content\">\n\t\t\t\t<img class=\"right floated ui image\" src=\"" + this.avatar + "\">\n\n\t\t\t\t<div class=\"userstatus\">\n\t\t\t\t\t<div class=\"description\">\n\t\t\t\t\t\t<div class=\"username\">\n\t\t\t\t\t\t\t" + this.name + "\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<p class=\"status-icon\" style=\"background-color: " + bg + "\"></p>\n\t\t\t\t\t\t<span>" + this.status + "</span>\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t<h6>Developer</h6>\n\t\t\t\t</div>\t\t\n\t\t\t\t<div class=\"userip\">\n\t\t\t\t\t<b>IP:&nbsp</b>\n\t\t\t\t\t<p>" + this.ip + "</p>\n\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t</div>\n\n\t\t\t\n\t\t</div>\n\t\t";
+    return "\n\t\t<div class=\"card user\">\n\t\t\t<div class=\"content\">\n\t\t\t\t<img class=\"right floated ui image\" src=\"" + this.avatar + "\">\n\n\t\t\t\t<div class=\"userstatus\">\n\t\t\t\t\t<div class=\"description\">\n\t\t\t\t\t\t<div class=\"username\">\n\t\t\t\t\t\t\t" + this.name + "\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<p class=\"status-icon\" style=\"background-color: " + bg + "\"></p>\n\t\t\t\t\t\t<span>" + this.status + "</span>\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t<h6>Developer</h6>\n\t\t\t\t</div>\t\t\n\t\t\t\t<div class=\"userip\">\n\t\t\t\t\t<b>IP:&nbsp</b>\n\t\t\t\t\t<p>" + this.ip + "</p>\n\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t</div>\t\t\t\n\t\t</div>\n\t\t";
   };
 
   return User;
@@ -85174,7 +85174,7 @@ function () {
   }
 
   Company.prototype.markerContent = function () {
-    return "\n\t\t\t<div class=\"ui card company\">\n\t\t\t\t<div class=\"content\">\n\t\t\t\t\t<div class=\"header\">\n\t\t\t\t\t\t<h3>" + this.companyName + "</h3>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"content\">\n\t\t\t\t\t<h5>" + this.bs + "</h5>\t\t\t\t\n\t\t\t\t\t<b>Server:</b>\n\t\t\t\t\t<p>" + this.ip + "</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t";
+    return "\n\t\t\t<div class=\"ui card company\">\t\t\t\t\n\t\t\t\t<div class=\"info\">\t\t\t\t\t\n\t\t\t\t\t<div class=\"left floated header\">\n\t\t\t\t\t\t<h3>" + this.companyName + "</h3>\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"right floated company-icon\">\n\t\t\t\t\t\t<i class=\"building icon\"></i>\t\n\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\n\t\t\t\t</div>\t\t\t\t\n\t\t\t\t<div class=\"companyip\">\n\t\t\t\t\t<h5>" + this.bs + "</h5>\t\t\t\t\n\t\t\t\t\t<b>Server:</b>\n\t\t\t\t\t<p>" + this.ip + "</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t";
   };
 
   return Company;

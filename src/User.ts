@@ -45,9 +45,7 @@ export class User {
 					<b>IP:&nbsp</b>
 					<p>${this.ip}</p>
 				</div>											
-			</div>
-
-			
+			</div>			
 		</div>
 		`;
 	}

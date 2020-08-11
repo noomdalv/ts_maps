@@ -23,13 +23,16 @@ export class Company {
 
 	markerContent(): string {
 		return `
-			<div class="ui card company">
-				<div class="content">
-					<div class="header">
-						<h3>${this.companyName}</h3>
+			<div class="ui card company">				
+				<div class="info">					
+					<div class="left floated header">
+						<h3>${this.companyName}</h3>						
 					</div>
-				</div>
-				<div class="content">
+					<div class="right floated company-icon">
+						<i class="building icon"></i>	
+					</div>									
+				</div>				
+				<div class="companyip">
 					<h5>${this.bs}</h5>				
 					<b>Server:</b>
 					<p>${this.ip}</p>
